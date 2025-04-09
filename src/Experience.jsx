@@ -78,7 +78,7 @@ export default function Experience() {
             {isAdmin && <Undangan/>}
             
             
-            {!isAdmin && <><div className="fixed inset-0 bg-[url('/bg.jpg')] bg-contain bg-center bg-repeat-y opacity-20 -z-10"></div>
+            {!isAdmin && <><div className="fixed inset-0 bg-[url('/bg.jpg')] bg-contain bg-center bg-repeat-y opacity-50 -z-10"></div>
             
             <Hero enableScroll={enableScroll} heroRef={heroRef} />
             <Navbar isScrollEnabled={isScrollEnabled} />
@@ -100,7 +100,7 @@ export default function Experience() {
             {/* Tombol Play/Pause */}
             <button 
                 onClick={toggleAudio} 
-                className={`${isScrollEnabled ? "opacity-1" : "opacity-0"} fixed bottom-16 right-5 bg-amber-800 text-white p-5 rounded-full shadow-lg transition-all duration-300 active:scale-90`}
+                className={`${isScrollEnabled ? "opacity-1" : "opacity-0"} fixed bottom-16 right-5 bg-purple-950 text-pink-200 p-5 rounded-full shadow-lg transition-all duration-300 active:scale-90`}
             >
                 <div className={isPlaying ? "animate-spin-slow" : ""}>
                     {isPlaying ? <PauseIcon className="w-6 h-6" /> : <PlayIcon className="w-6 h-6" />}

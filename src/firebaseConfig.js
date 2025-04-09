@@ -5,12 +5,13 @@ import { getFirestore, collection, addDoc, deleteDoc, doc, serverTimestamp } fro
 
 // Konfigurasi dari Firebase Console
 const firebaseConfig = {
-    apiKey: "AIzaSyDLl4ShuLwDDoeCNqFCl7WK-MU2tDOxaKo",
-    authDomain: "undangan-aisyah-anang.firebaseapp.com",
-    projectId: "undangan-aisyah-anang",
-    storageBucket: "undangan-aisyah-anang.firebasestorage.app",
-    messagingSenderId: "660121545373",
-    appId: "1:660121545373:web:0d9415fe8ab53229fc0274"
+  apiKey: "AIzaSyDN7gPpmtu8qtzQFwCCjernaf7i6Pw29l8",
+  authDomain: "musfira-haryandi.firebaseapp.com",
+  projectId: "musfira-haryandi",
+  storageBucket: "musfira-haryandi.firebasestorage.app",
+  messagingSenderId: "293591309597",
+  appId: "1:293591309597:web:78e5fcfcf5a259544195f4",
+  measurementId: "G-22WKTF8CXC"
 };
 
 const app = initializeApp(firebaseConfig);

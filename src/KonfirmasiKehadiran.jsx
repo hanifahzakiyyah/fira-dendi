@@ -75,7 +75,7 @@ const KonfirmasiKehadiran = () => {
             <button
                 type="submit"
                 disabled={loading}
-                className="w-full p-2 bg-yellow-700 text-white rounded disabled:bg-gray-400"
+                className="w-full p-2 bg-purple-900 text-pink-200 rounded disabled:bg-gray-400"
             >
                 {loading ? "Mengirim..." : "Kirim"}
             </button>

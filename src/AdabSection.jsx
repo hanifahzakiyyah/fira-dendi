@@ -1,6 +1,6 @@
 const AdabSection = () => {
     return (
-      <section id="adab" className="py-20 bg-yellow-100/50">
+      <section id="adab" className="py-20 bg-pink-200/50">
         <div className="container mx-auto flex justify-center">
           <div 
             className="max-w-md" 

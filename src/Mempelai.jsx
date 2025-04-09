@@ -4,7 +4,7 @@ import { MapPinIcon, ClockIcon, CalendarDaysIcon } from "@heroicons/react/24/sol
 
 const Mempelai = () => {
   return (
-    <section id="mempelai" className="pt-[8rem] pb-[8rem] px-5 bg-yellow-100/50 text-orange-900">
+    <section id="mempelai" className="pt-[8rem] pb-[8rem] px-5 bg-pink-200/50 text-orange-900">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center">
           <h2 data-aos="fade-down" data-aos-duration="2000" className="font-zain">بسم الله الرحمن الرحيم</h2>

@@ -7,19 +7,19 @@ const Home = () => {
   const renderer = ({ days, hours, minutes, seconds }) => {
     return (
       <div className="flex justify-center gap-4 mt-8">
-        <div className="w-24 h-24 flex flex-col items-center justify-center bg-yellow-100 shadow-inner rounded-full">
+        <div className="w-24 h-24 flex flex-col items-center justify-center bg-pink-200 shadow-inner rounded-full">
           <span className="text-2xl font-bold">{days}</span>
           <span className="text-sm">Hari</span>
         </div>
-        <div className="w-24 h-24 flex flex-col items-center justify-center bg-yellow-100 shadow-inner rounded-full">
+        <div className="w-24 h-24 flex flex-col items-center justify-center bg-pink-200 shadow-inner rounded-full">
           <span className="text-2xl font-bold">{hours}</span>
           <span className="text-sm">Jam</span>
         </div>
-        <div className="w-24 h-24 flex flex-col items-center justify-center bg-yellow-100 shadow-inner rounded-full">
+        <div className="w-24 h-24 flex flex-col items-center justify-center bg-pink-200 shadow-inner rounded-full">
           <span className="text-2xl font-bold">{minutes}</span>
           <span className="text-sm">Menit</span>
         </div>
-        <div className="w-24 h-24 flex flex-col items-center justify-center bg-yellow-100 shadow-inner rounded-full">
+        <div className="w-24 h-24 flex flex-col items-center justify-center bg-pink-200 shadow-inner rounded-full">
           <span className="text-2xl font-bold">{seconds}</span>
           <span className="text-sm">Detik</span>
         </div>
