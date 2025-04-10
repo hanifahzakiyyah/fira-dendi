@@ -5,7 +5,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Undangan() {
     const [nama, setNama] = useState("");
-    const [buka, setBuka] = useState("false");
+    const [buka, setBuka] = useState(false);
     const [data, setData] = useState([]);
     const [panggilan, setPanggilan] = useState("");
     const [copied, setCopied] = useState(false);
