@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { db }  from "./firebaseConfig";
+import { collection, getDocs } from "firebase/firestore";
+import { XMarkIcon } from "@heroicons/react/24/outline";
 
 export default function Undangan() {
     const [nama, setNama] = useState("");
+    const [buka, setBuka] = useState("false");
+    const [data, setData] = useState([]);
     const [panggilan, setPanggilan] = useState("");
     const [copied, setCopied] = useState(false);
     const [copiedText, setCopiedText] = useState(false);
@@ -30,11 +35,16 @@ export default function Undangan() {
         setTimeout(() => setCopiedState(false), 2000);
     };
 
-    const resetForm = () => {
-        setNama("");
-        setPanggilan("");
-        setSesi("1");
-    };
+    useEffect(() => {
+        if (!buka) return;
+        const fetchData = async () => {
+          const colRef = collection(db, "pesan-pesan"); 
+          const snapshot = await getDocs(colRef);
+          const items = snapshot.docs.map(doc => doc.data());
+          setData(items);
+        };
+        fetchData();
+      }, [buka]);
 
 
     return (
@@ -88,11 +98,51 @@ export default function Undangan() {
                     {copiedText && <span className="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-gray-800 text-white text-xs rounded py-1 px-2">Undangan telah disalin.</span>}
                 </div>
                 <button 
-                    onClick={resetForm} 
+                    onClick={()=>setBuka(true)} 
                     className="w-full bg-[#e4307a] text-white py-2 rounded-lg hover:bg-pink-800 mt-2"
                 >
-                    Reset
+                    Buka Daftar Konfirmasi Kehadiran
                 </button>
+                {buka && <div className="fixed top-0 left-0 bottom-0 right-0 z-[60] bg-white flex items-center justify-center">
+                    <div className="w-96 min-h-96 shadow-2xl border rounded-3xl p-6 relative">
+                        <p>Daftar Konfirmasi Kehadiran</p>
+                        <div className="space-y-4 max-h-80 overflow-y-auto">
+                        <table className="w-full text-sm text-left border rounded-xl overflow-hidden">
+                            <thead className="bg-gray-200 text-gray-700">
+                                <tr>
+                                <th className="p-2">#</th>
+                                <th className="p-2">Nama</th>
+                                <th className="p-2">Status</th>
+                                <th className="p-2">Jumlah</th>
+                                <th className="p-2">Waktu</th>
+                                </tr>
+                            </thead>
+                            <tbody className="bg-white">
+                                {data.map((item, idx) => (
+                                <tr key={idx} className="border-t">
+                                    <td className="p-2">{idx + 1}</td>
+                                    <td className="p-2">{item.nama}</td>
+                                    <td className="p-2">{item.status}</td>
+                                    <td className="p-2">{item.jumlah}</td>
+                                    <td className="p-2">
+                                    {item.waktu?.seconds
+                                        ? new Date(item.waktu.seconds * 1000).toLocaleString()
+                                        : "-"}
+                                    </td>
+                                </tr>
+                                ))}
+                            </tbody>
+                            </table>
+
+                        </div>
+                        <button
+                            className="absolute top-4 right-4 text-gray-500 hover:text-black"
+                            onClick={() => setBuka(false)}
+                            >
+                            <XMarkIcon className="h-6 w-6" />
+                        </button>
+                    </div>
+                </div>}
             </div>
         </section>
     );
