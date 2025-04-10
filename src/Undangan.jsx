@@ -3,13 +3,11 @@ import { useState } from "react";
 export default function Undangan() {
     const [nama, setNama] = useState("");
     const [panggilan, setPanggilan] = useState("");
-    const [sesi, setSesi] = useState("1");
     const [copied, setCopied] = useState(false);
     const [copiedText, setCopiedText] = useState(false);
 
     const defaultNama = "Tamu Undangan";
     const defaultPanggilan = "Bapak/Ibu Saudara/i";
-    const defaultSesi = "1";
     const toTitleCase = (str) => {
         if (!str) return "";
       
@@ -22,9 +20,9 @@ export default function Undangan() {
 
     const formattedNama = (nama || defaultNama).toLowerCase();
     const formattedPanggilan = (panggilan || defaultPanggilan).toLowerCase();
-    const url = `https://walimah-ais-anang.vercel.app/?kpd=${encodeURIComponent(formattedNama)}&p=${encodeURIComponent(formattedPanggilan)}&sesi=${sesi || defaultSesi}`;
+    const url = `https://pernikahan-fira-dendi.vercel.app/?kpd=${encodeURIComponent(formattedNama)}&p=${encodeURIComponent(formattedPanggilan)}`;
 
-    const invitationText = `Kepada Yth. ${toTitleCase(panggilan) || defaultPanggilan} :\n${toTitleCase(nama) || defaultNama}\n\n_____________________\n\nAssalamualaikum Warahmatullahi Wabarakatuh\n\nTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan anak kami.\n\nBerikut link undangan kami, untuk info lengkap dari acara, bisa kunjungi:\n\n🔗 ${url}\n\nMerupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\n\nWassalamualaikum Warahmatullahi Wabarakatuh\n\nHormat kami,\nDidit Sofyan Muaffif (Alm) & Chas Kunarti`;
+    const invitationText = `Kepada Yth. ${toTitleCase(panggilan) || defaultPanggilan} :\n${toTitleCase(nama) || defaultNama}\n\n_____________________\n\nAssalamualaikum Warahmatullahi Wabarakatuh\n\nTanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan anak kami.\n\nBerikut link undangan kami, untuk info lengkap dari acara, bisa kunjungi:\n\n🔗 ${url}\n\nMerupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\n\nWassalamualaikum Warahmatullahi Wabarakatuh\n\nHormat kami,\n Bapak Haidir & Ibu Arsil`;
 
     const copyToClipboard = (text, setCopiedState) => {
         navigator.clipboard.writeText(text);
@@ -64,17 +62,6 @@ export default function Undangan() {
                             onChange={(e) => setPanggilan(e.target.value)}
                         />
                     </div>
-                    <div>
-                        <label className="block text-sm font-medium">Sesi</label>
-                        <select 
-                            className="w-full border rounded-lg p-2" 
-                            value={sesi} 
-                            onChange={(e) => setSesi(e.target.value)}
-                        >
-                            <option value="1">Sesi 1</option>
-                            <option value="2">Sesi 2</option>
-                        </select>
-                    </div>
                 </form>
                 <div className="mt-4 p-3 border rounded-lg bg-gray-100 text-center break-all">
                     {url}
@@ -82,7 +69,7 @@ export default function Undangan() {
                 <div className="relative mt-2">
                     <button 
                         onClick={() => copyToClipboard(url, setCopied)} 
-                        className="w-full bg-yellow-700 text-white py-2 rounded-lg hover:bg-yellow-800"
+                        className="w-full bg-[#e4307a] text-white py-2 rounded-lg hover:bg-pink-800"
                     >
                         Copy Link
                     </button>
@@ -94,7 +81,7 @@ export default function Undangan() {
                 <div className="relative mt-2">
                     <button 
                         onClick={() => copyToClipboard(invitationText, setCopiedText)} 
-                        className="w-full bg-yellow-700 text-white py-2 rounded-lg hover:bg-yellow-800"
+                        className="w-full bg-[#e4307a] text-white py-2 rounded-lg hover:bg-pink-800"
                     >
                         Copy Undangan
                     </button>
@@ -102,7 +89,7 @@ export default function Undangan() {
                 </div>
                 <button 
                     onClick={resetForm} 
-                    className="w-full bg-yellow-800 text-white py-2 rounded-lg hover:bg-yellow-800 mt-2"
+                    className="w-full bg-[#e4307a] text-white py-2 rounded-lg hover:bg-pink-800 mt-2"
                 >
                     Reset
                 </button>

@@ -29,7 +29,7 @@ const Mempelai = () => {
             <div className="md:w-1/3 flex justify-center">
                 <div className="md:w-2/3 text-right mr-5" data-aos="flip-up" data-aos-duration="2000">
                     <h3 className="text-4xl font-sacramento text-[#e4307a]">Musfira (Fira)</h3>
-                    <p>Putri pertama dari Haidir dan Ibu Arsil</p>
+                    <p>Putri pertama dari Bapak Haidir dan Ibu Arsil</p>
                 </div>
             </div>
             <img
