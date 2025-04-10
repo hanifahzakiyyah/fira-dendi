@@ -58,16 +58,16 @@ const Hero = ({ enableScroll, heroRef }) => {
         <div className="flex justify-center">
           <img src="/pngwing.com.png" alt="" className="w-80 mx-auto" data-aos="zoom-in" />
         </div>
-        <h4 className="text-md text-purple-900 capitalize" data-aos="fade-up">
+        <h4 className="text-md text-black capitalize" data-aos="fade-up">
           Kepada Yth {panggilan ? toTitleCase(panggilan) : "Bapak/Ibu/Saudara/i"} 
         </h4>
         
         {/* Nama tamu dari URL */}
-        <h4 className="text-2xl diundang capitalize text-purple-900" data-aos="fade-up">
+        <h4 className="text-2xl diundang capitalize text-black" data-aos="fade-up">
           {namaTamu ? toTitleCase(namaTamu) : "Tamu Undangan"}
         </h4>
 
-        <h4 className="text-xl text-purple-900" data-aos="fade-up">
+        <h4 className="text-xl text-black" data-aos="fade-up">
           Di Tempat
         </h4>
 

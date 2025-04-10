@@ -4,7 +4,7 @@ const TanggalSection = () => {
   
 
   return (
-    <section id="tanggal" className="py-20 px-5 pt-44 text-center text-purple-900">
+    <section id="tanggal" className="py-20 px-5 pt-44 text-center text-[#10031d]">
       <div className="container mx-auto px-4">
         {/* Judul & Lokasi */}
         <div className="max-w-xl mx-auto">
@@ -17,15 +17,15 @@ const TanggalSection = () => {
           </p>
 
           <div 
-            className="shadow-lg rounded-lg p-6 text-purple-900" 
+            className="shadow-lg rounded-lg p-6 text-[#10031d]" 
             data-aos="fade-up-right" data-aos-duration="2000">
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <CalendarDaysIcon className="w-8 h-8 text-purple-900 mx-auto" />
+                <CalendarDaysIcon className="w-8 h-8 text-[#10031d] mx-auto" />
                 <p className="mt-2 text-lg">Minggu, 20 April 2025</p>
               </div>
               <div>
-                <ClockIcon className="w-8 h-8 text-purple-900 mx-auto" />
+                <ClockIcon className="w-8 h-8 text-[#10031d] mx-auto" />
                 <p className="mt-2 text-lg">
                   19:00 - selesai WIB
                 </p>
@@ -40,7 +40,7 @@ const TanggalSection = () => {
                 <a 
                   href="" 
                   target="_blank" 
-                  className="inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-pink-200 bg-purple-900 rounded-lg shadow-md hover:bg-orange-500 transition">
+                  className="inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-pink-200 bg-purple-900 rounded-lg shadow-md hover:bg-purple-700 transition">
                   <MapPinIcon className="w-6 h-6" /> Klik Map
                 </a>
               </p>

@@ -4,7 +4,7 @@ import { MapPinIcon, ClockIcon, CalendarDaysIcon } from "@heroicons/react/24/sol
 
 const Mempelai = () => {
   return (
-    <section id="mempelai" className="pt-[8rem] pb-[8rem] px-5 bg-pink-200/50 text-orange-900">
+    <section id="mempelai" className="pt-[8rem] pb-[8rem] px-5 bg-purple-200/50 text-[#10031d]">
       <div className="container mx-auto">
         <div className="flex flex-col items-center text-center">
           <h2 data-aos="fade-down" data-aos-duration="2000" className="font-zain">بسم الله الرحمن الرحيم</h2>
@@ -28,7 +28,7 @@ const Mempelai = () => {
           <div className="flex flex-row items-center md:justify-center w-full max-w-3xl ">
             <div className="md:w-1/3 flex justify-center">
                 <div className="md:w-2/3 text-right mr-5" data-aos="flip-up" data-aos-duration="2000">
-                    <h3 className="text-4xl font-sacramento text-orange-800">Musfira (Fira)</h3>
+                    <h3 className="text-4xl font-sacramento text-[#e4307a]">Musfira (Fira)</h3>
                     <p>Putri pertama dari Haidir dan Ibu Arsil</p>
                 </div>
             </div>
@@ -51,7 +51,7 @@ const Mempelai = () => {
             />
             <div className="md:w-1/3 flex justify-center">
                 <div className="md:w-2/3 text-left" data-aos="flip-right" data-aos-duration="2000">
-                    <h3 className="text-4xl font-sacramento text-orange-800">Haryandi (Dandi)</h3>
+                    <h3 className="text-4xl font-sacramento text-[#e4307a]">Haryandi (Dandi)</h3>
                     <p>Putra kedua dari Bapak Ancong (Alm) dan Ibu Ecce Juhni</p>
                 </div>
             </div>
@@ -60,16 +60,16 @@ const Mempelai = () => {
         </div>
 
         <div 
-            className=" shadow-lg rounded-lg p-6 text-orange-800" 
+            className=" shadow-lg rounded-lg p-6 text-[#10031d]" 
             data-aos="fade-up-right" data-aos-duration="2000">
             <div className="text-xl font-semibold border-b pb-2 mb-4 text-center">Akad Nikah</div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <CalendarDaysIcon className="w-8 h-8 text-orange-800 mx-auto" />
+                <CalendarDaysIcon className="w-8 h-8 text-[#e4307a] mx-auto" />
                 <p className="mt-2 text-lg">Minggu, 20 April 2025</p>
               </div>
               <div>
-                <ClockIcon className="w-8 h-8 text-orange-800 mx-auto" />
+                <ClockIcon className="w-8 h-8 text-[#e4307a] mx-auto" />
                 <p className="mt-2 text-lg">09:00 - 02:00 WIB</p>
               </div>
               

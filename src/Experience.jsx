@@ -100,7 +100,7 @@ export default function Experience() {
             {/* Tombol Play/Pause */}
             <button 
                 onClick={toggleAudio} 
-                className={`${isScrollEnabled ? "opacity-1" : "opacity-0"} fixed bottom-16 right-5 bg-purple-950 text-pink-200 p-5 rounded-full shadow-lg transition-all duration-300 active:scale-90`}
+                className={`${isScrollEnabled ? "opacity-1" : "opacity-0"} fixed bottom-16 right-5 bg-purple-950 text-pink-200 p-5 rounded-full shadow-lg transition-all duration-300 active:scale-90 border border-purple-800`}
             >
                 <div className={isPlaying ? "animate-spin-slow" : ""}>
                     {isPlaying ? <PauseIcon className="w-6 h-6" /> : <PlayIcon className="w-6 h-6" />}
