@@ -70,7 +70,7 @@ const Mempelai = () => {
               </div>
               <div>
                 <ClockIcon className="w-8 h-8 text-[#e4307a] mx-auto" />
-                <p className="mt-2 text-lg">09:00 - 02:00 WIB</p>
+                <p className="mt-2 text-lg">09:00 - 14:00 WITA</p>
               </div>
               
             </div>
